@@ -21,5 +21,33 @@ public class Main {
             score = 0;
         }
         
+        //Statements
+        int myVariable = 50;
+        myVariable++;
+        myVariable--;
+            System.out.println("This a Test");
+
+            //WhiteSpace - THIS SILLY
+        int         myWhiteSpace        =      50;
+
+
+        boolean gameOver = true;
+	    int scoreEx = 5000;
+	    int levelCompleted = 5;
+	    int bonus = 100;
+
+	    if (scoreEx < 5000 && scoreEx > 1000) {
+            System.out.println("your score was less than 5000");
+        } else if (scoreEx < 1000) {
+            System.out.println("your score is less than 1000");
+        } else {
+            System.out.println("Got here");
+        }
+	    
+	    if (gameOver == true) {
+	        int finalScore = score + (levelCompleted * bonus);
+            System.out.println("Your final score was " + finalScore);
+        }
+
     }
 }
