@@ -1,6 +1,7 @@
 package lm.programming;
 import javax.swing.JOptionPane;
 
+//Method
 public class Main {
 
     public static void main(String[] args) {
@@ -47,6 +48,62 @@ public class Main {
 	    if (gameOver == true) {
 	        int finalScore = score + (levelCompleted * bonus);
             System.out.println("Your final score was " + finalScore);
+        }
+
+        boolean gameOverG = true;
+        int scoreG = 800;
+        int levelCompletedG = 5;
+        int bonusG = 100;
+
+        int highScoreG = calculateScore(gameOverG, scoreG, levelCompletedG, bonusG);
+        System.out.println("Your final score was " + highScoreG);
+
+        scoreG = 10000;
+        levelCompletedG = 8;
+        bonusG = 200;
+        highScoreG = calculateScore(gameOverG, scoreG, levelCompletedG, bonusG);
+        System.out.println("Your final score was " + highScoreG);
+
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("Tim", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(900);
+        displayHighScorePosition("Bob", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(400);
+        displayHighScorePosition("Percy", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(50);
+        displayHighScorePosition("Gilbert", highScorePosition);
+
+    }
+
+    public static void displayHighScorePosition(String playerName, int highScorePosition) {
+        System.out.println(playerName + " managed to get into position "
+                + highScorePosition + " on the high score table");
+    }
+
+    public static int calculateHighScorePosition(int playerScore) {
+        if(playerScore >= 1000) {
+            return 1;
+        }else if(playerScore >= 500 && playerScore < 1000) {
+            return 2;
+        }else if(playerScore >= 100 && playerScore < 500) {
+            return 3;
+        }else {
+            return 4;
+        }
+    }
+
+    //Method
+    public static int calculateScore(boolean gameOverG, int scoreG, int levelCompletedG, int bonusG) {
+
+        if (gameOverG) {
+            int finalScoreG = scoreG + (levelCompletedG * bonusG);
+            finalScoreG += 2000;
+            return finalScoreG;
+        } else {
+            return -1; //In JAVA -1 means return an error, Invalid value or value not found
         }
 
     }
