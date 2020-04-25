@@ -1,10 +1,18 @@
 package lm.programming;
 import javax.swing.JOptionPane;
 
+import lm.SpeedConverter;
+
 //Method
 public class Main {
 
     public static void main(String[] args) {
+
+       double miles = SpeedConverter.toMilesPerHour(10.5);
+       System.out.println("Miles = " + miles);
+
+       SpeedConverter.prinConversion(10.5);
+
         JOptionPane.showMessageDialog(null, "Welcome To My Java Testing Environment", "Autor: Laycon Muriziq", (JOptionPane.INFORMATION_MESSAGE));
         
         //Expression - A mile is equal to 1.609344 kilometers
@@ -75,6 +83,7 @@ public class Main {
 
         highScorePosition = calculateHighScorePosition(50);
         displayHighScorePosition("Gilbert", highScorePosition);
+        
 
     }
 
@@ -116,28 +125,6 @@ public class Main {
             return -1; //In JAVA -1 means return an error, Invalid value or value not found
         }
 
-    }
-    
-
-        public static long toMilesPerHour(double kilometersPerHour) {
-    
-            if(kilometersPerHour < 0) {
-                return -1;
-            }
-    
-            return Math.round(kilometersPerHour / 1.609);
-        }
-        
-        public static void prinConversion(double kilometersPerHour) {
-            
-            if(kilometersPerHour < 0) {
-                System.out.println("Invalid Value");
-            } else {
-                long milesPerHour = toMilesPerHour(kilometersPerHour);
-                System.out.println(kilometersPerHour +
-                        "km/h = " + milesPerHour +
-                        "mi/h");
-            }
-        }
+    } 
     
 }
