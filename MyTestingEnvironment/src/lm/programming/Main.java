@@ -2,6 +2,7 @@ package lm.programming;
 import javax.swing.JOptionPane;
 
 import lm.SpeedConverter;
+import lm.SecondsAndMinutesChallenge;
 
 //Method
 public class Main {
@@ -20,6 +21,7 @@ public class Main {
 
         JOptionPane.showMessageDialog(null, "Welcome To My Java Testing Environment", "Autor: Laycon Muriziq", (JOptionPane.INFORMATION_MESSAGE));
         
+        SecondsAndMinutesChallenge.getDurationString(65, 9);
         //Expression - A mile is equal to 1.609344 kilometers
         double kilometers = (100 * 1.609344);
         int highScore = 50; // An expression without the int
