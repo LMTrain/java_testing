@@ -26,6 +26,21 @@ public class Switch {
             default:
                 System.out.println("Was not 1 or 2");
         }
+
+        String month = "JuNe";
+	    switch(month.toLowerCase()) {
+            case "january":
+                System.out.println("Jan");
+                break;
+            case "june":
+                System.out.println("Jun");
+                break;
+            default:
+                System.out.println("Not Sure");
+                break;
+
+
+        }
     }
     
 }
