@@ -15,5 +15,10 @@ public class WhileDoLoopStatement {
                 System.out.println("Count value is " + count);
                 count++;
             }
+            count = 0;
+            do {
+                System.out.println("Count value is " + count);
+                count++;
+            } while (count != 6);
         }
 }
