@@ -7,5 +7,13 @@ public class WhileDoLoopStatement {
                 System.out.println("Count value is " + count);
                 count++;
             }
+            count = 0;
+            while(true) {
+                if(count == 5) {
+                    break;
+                }
+                System.out.println("Count value is " + count);
+                count++;
+            }
         }
 }
