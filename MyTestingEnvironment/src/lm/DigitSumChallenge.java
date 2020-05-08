@@ -17,7 +17,7 @@ public class DigitSumChallenge {
             int digit = number % 10;
             sum += digit;
 
-       
+            //drop the least-significant digit
             number /= 10; // same as number = number /10;
         }
         return sum;
