@@ -3,12 +3,20 @@ import javax.swing.JOptionPane;
 
 public class DayOfTheWeekChallenge {
     public static void main(String[] args) {
-        //Enter Day of the Week in Numbers
-        String dayString = JOptionPane.showInputDialog("Enter day of the week in number");
+        int count = 0;
+            while(true) {
+                if(count == 8) {
+                    break;
+                } 
 
-        //Convert string to int
-        int day = Integer.parseInt(dayString);
-        printDayOfTheWeek(day);
+                //Enter Day of the Week in Numbers
+                String dayString = JOptionPane.showInputDialog("Enter day of the week in number");
+        
+                //Convert string to int
+                int day = Integer.parseInt(dayString);
+                printDayOfTheWeek(day);
+                count++;
+            }
         
     }
     private static void printDayOfTheWeek(int day) {
