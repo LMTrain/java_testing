@@ -12,8 +12,9 @@ public class Main {
 
         Car porsche = new Car();
         Car holden = new Car();
-        porsche.model = "Carrera";
-        
+        porsche.setModel("911");
+        System.out.println("Model is " + porsche.getModel());
+
         int newScore = calculateScore("Laycon", 500);
         System.out.println("New score is " + newScore);
         calculateScore(75);
