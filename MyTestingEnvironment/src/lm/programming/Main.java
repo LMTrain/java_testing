@@ -9,6 +9,11 @@ import lm.SecondsAndMinutesChallenge;
 public class Main {
 
     public static void main(String[] args) {
+
+        Car porsche = new Car();
+        Car holden = new Car();
+        porsche.model = "Carrera";
+        
         int newScore = calculateScore("Laycon", 500);
         System.out.println("New score is " + newScore);
         calculateScore(75);
