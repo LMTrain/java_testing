@@ -10,10 +10,47 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // *******************FOR Car.java**************************************
         Car porsche = new Car();
         Car holden = new Car();
         porsche.setModel("911");
         System.out.println("Model is " + porsche.getModel());
+        // *********************************************************************
+
+        // *******************FOR Account.java************************************************
+        Account bobsAccount = new Account(); // "12345", 0.00, "Bob Brown", "myemail@bob.com",
+                // "(087) 123-4567");
+        bobsAccount.setNumber("12345");
+        bobsAccount.setBalance(0.00);
+        bobsAccount.setCustomerEmailAddress("bo@gmail.com");
+        bobsAccount.setCustomerPhoneNumber("(763) 123-3456");
+
+        System.out.println(bobsAccount.getNumber());
+        System.out.println(bobsAccount.getBalance());
+
+        bobsAccount.withdrawal(100.0);
+
+        bobsAccount.deposit(50.0);
+        bobsAccount.withdrawal(100.0);
+
+        bobsAccount.deposit(51.0);
+        bobsAccount.withdrawal(100.0);
+        // *****************************************************************************************
+
+
+
+
+        // *************FOR VipPerson.java******************************************************
+        VipPerson person1 = new VipPerson();
+        System.out.println(person1.getName());
+
+        VipPerson person2 = new VipPerson("Bob", 25000.00);
+        System.out.println(person2.getName());
+
+        VipPerson person3 = new VipPerson("Tim", 100.00, "tim@gmail.com");
+        System.out.println(person3.getName());
+
+        // ************************************************************************************
 
         int newScore = calculateScore("Laycon", 500);
         System.out.println("New score is " + newScore);
